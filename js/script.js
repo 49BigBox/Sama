@@ -11,7 +11,7 @@ function scrollFunction() {
             testElement.style.padding = "40px 15px"
         });
         document.getElementById("header").style.background = "white";
-        document.querySelector("header").classList.toggle('onscroll',window.scrollY > 80)
+        document.querySelector("header").classList.toggle('onscroll', window.scrollY > 80)
     } else {
         document.getElementById("a__logo").style.padding = "35px 0";
         document.getElementById("header-btn").style.padding = "35px 0"
@@ -36,7 +36,8 @@ lightGallery(document.getElementById("animated-thumbnails"), {
     actualSize: false,
     exThumbImage: "data-exthumbimage"
 });
-function changeColorPlanMonthly(){
+
+function changeColorPlanMonthly() {
     let yearly = document.getElementById('yearly');
     let monthly = document.getElementById('monthly');
     let onclick__plan = document.getElementById('onclick__plan');
@@ -44,7 +45,8 @@ function changeColorPlanMonthly(){
     monthly.style.color = "black"
     onclick__plan.style.transform = 'translateX(5px) translateY(4px)'
 }
-function changeColorPlanYearly(){
+
+function changeColorPlanYearly() {
     let yearly = document.getElementById('yearly');
     let monthly = document.getElementById('monthly');
     let onclick__plan = document.getElementById('onclick__plan');
@@ -52,3 +54,60 @@ function changeColorPlanYearly(){
     monthly.style.color = "white"
     onclick__plan.style.transform = 'translateX(115px) translateY(4px)'
 }
+
+var testimonialThumbs = new Swiper(".testimonial-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    centeredSlides: true,
+    freeMode: true,
+    autoplay: true,
+    loop: true,
+    speed: 3000
+});
+
+
+var testimonialContent = new Swiper(".testimonial-comment", {
+    spaceBetween: 10,
+    autoplay: true,
+    loop: true,
+    speed: 3000,
+    thumbs: {
+        swiper: testimonialThumbs
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    }
+});
+
+
+$(document).ready(function(){
+    'use strict';
+    $(".clients-carousel").owlCarousel({
+        loop:true,
+        margin:30,
+        nav: false,
+        autoplaySpeed: 3000,
+        navSpeed: 3000,
+        paginationSpeed: 3000,
+        slideSpeed: 3000,
+        smartSpeed: 3000,
+        autoplay: true,
+        dots: false,
+        items: 6
+    });
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:30,
+        nav:false,
+        autoplaySpeed: 3000,
+        navSpeed: 3000,
+        paginationSpeed: 3000,
+        slideSpeed: 3000,
+        smartSpeed: 3000,
+        autoplay: true,
+        dots: false,
+        items: 3,
+    });
+
+});
