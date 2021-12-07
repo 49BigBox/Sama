@@ -20,10 +20,21 @@ function scrollFunction() {
             testElement.style.padding = "55px 15px"
         });
         document.getElementById("header").style.background = "transparent";
-        document.querySelector("header").classList.toggle('onscroll')
+        document.querySelector("header").classList.toggle('onscroll',window.scrollY > 80)
 
     }
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        document.getElementById('back-to-top').style.display = "block"
+        document.getElementById('back-to-top').style.opacity = "1";
+
+    } else{
+        document.getElementById('back-to-top').style.display = "none"
+        document.getElementById('back-to-top').style.opacity = "0";
+    }
+
+
 }
+
 
 lightGallery(document.getElementById("animated-thumbnails"), {
     selector: ".lightimg",
@@ -81,11 +92,11 @@ var testimonialContent = new Swiper(".testimonial-comment", {
 });
 
 
-$(document).ready(function(){
+$(document).ready(function () {
     'use strict';
     $(".clients-carousel").owlCarousel({
-        loop:true,
-        margin:30,
+        loop: true,
+        margin: 30,
         nav: false,
         autoplaySpeed: 3000,
         navSpeed: 3000,
@@ -97,9 +108,9 @@ $(document).ready(function(){
         items: 6
     });
     $(".owl-carousel").owlCarousel({
-        loop:true,
-        margin:30,
-        nav:false,
+        loop: true,
+        margin: 30,
+        nav: false,
         autoplaySpeed: 3000,
         navSpeed: 3000,
         paginationSpeed: 3000,
