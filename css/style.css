@@ -255,6 +255,10 @@ h2 {
 .introduce {
     margin-top: 120px;
     color:      #262626;
+    background-image: url("../img/bg15.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .introduce .container {
@@ -497,8 +501,8 @@ h2 {
 
 .project__content {
     display:               grid;
-    grid-template-columns: 320px 320px 470px;
-    grid-template-rows: 435px 195px 280px;
+    grid-template-columns: 325px 325px 475px;
+    grid-template-rows:    440px 200px 285px;
     grid-gap:              30px;
 }
 
@@ -516,13 +520,13 @@ h2 {
     width:            100px;
     height:           100%;
     content:          "";
-    transform:        skew(-20deg) translateX(-150px);
+    transform:        skew(-20deg) translateX(-180px);
     opacity:          0.2;
     background-color: white;
 }
 
 .project__item:hover::before {
-    transition: all 0.6s;
+    transition: all 0.8s;
     transform:  skew(-20deg) translateX(900px);
 }
 
@@ -607,7 +611,12 @@ h2 {
 /*Pricing*/
 
 .pricing {
-    margin-top: 120px;
+    padding-top: 120px;
+    background-image: url("../img/bg16.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .pricing .container {
@@ -861,11 +870,12 @@ h2 {
 }
 
 .shape-bx:after {
-    width:               50px;
+    width:               54px;
     height:              35px;
     background-image:    url(../img/pattern12.png);
     background-position: bottom;
     background-size:     contain;
+    transform: translateX(-2px);
 }
 
 .testimonial-thumbs .swiper-slide-thumb-active .testimonial-pic:before, .testimonial-thumbs .swiper-slide-thumb-active .testimonial-pic:after {
@@ -1168,16 +1178,19 @@ footer .container {
 }
 
 .footer__top {
-    padding:             60px 0;
+    margin-top: -80px;
+    padding:             140px 0 60px 0;
     background-image:    url("../img/bg4.png");
     background-repeat:   no-repeat;
     background-position: center;
-    background-size:     cover;
+    background-size:     contain;
+    position: relative;
+    z-index: 1000;
 }
 
 .footer__flex {
+    z-index: 1;
     display: flex;
-    z-index:1;
 }
 
 .top__information, .top__item {
@@ -1279,6 +1292,8 @@ footer .top__item ul li a::before {
 
 .footer__bottom {
     background: #1F343B;
+    position: relative;
+    z-index: 99;
 }
 
 .footer__bottom .footer__flex {
