@@ -17,7 +17,7 @@ body {
 /*Header*/
 header {
     position:        fixed;
-    z-index:         99;
+    z-index:         9999;
     left:            50%;
     display:         flex;
     justify-content: space-between;
@@ -1293,7 +1293,7 @@ footer .top__item ul li a::before {
 .footer__bottom {
     background: #1F343B;
     position: relative;
-    z-index: 99;
+    z-index: 9;
 }
 
 .footer__bottom .footer__flex {
@@ -1313,7 +1313,12 @@ footer .top__item ul li a::before {
 .footer__bottom ul li {
     display: inline-block;
 }
-
+.footer__top .item__details ul li i{
+    transition: all 0.5s;
+}
+.footer__top .item__details ul li i:hover{
+    background-position: top right;
+}
 .bottom__right a {
     font-size:        14px;
     line-height:      32px;
@@ -1349,11 +1354,13 @@ footer .top__item ul li a::before {
     border-radius: 4px;
     background:    #F55F8D;
     box-shadow:    -4px 4px 24px -10px #F55F8D !important;
-
+    visibility: hidden;
+    opacity: 0;
 }
 
-#back-to-top {
-    opacity: 0;
+.cd-top--is-visible {
+    visibility: visible !important;
+    opacity:    1 !important;
 }
 
 /*animation*/
@@ -1372,21 +1379,6 @@ footer .top__item ul li a::before {
     }
 }
 
-.js .cd-top {
-    visibility: hidden;
-    transition: opacity .3s, visibility .3s, background-color .3s;
-    opacity:    0;
-}
-
-.js .cd-top--is-visible {
-    display:    block !important;
-    visibility: visible;
-    opacity:    1;
-}
-
-.js .cd-top--fade-out {
-    opacity: .5;
-}
 
 @keyframes upToDown {
     49% {

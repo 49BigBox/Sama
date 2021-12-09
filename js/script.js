@@ -24,15 +24,17 @@ function scrollFunction() {
 
     }
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-        document.getElementById('back-to-top').style.display = "block"
-        document.getElementById('back-to-top').style.opacity = "1";
-
+        document.getElementById('back-to-top').classList.add('cd-top--is-visible')
     } else{
-        document.getElementById('back-to-top').style.display = "none"
-        document.getElementById('back-to-top').style.opacity = "0";
+        document.getElementById('back-to-top').classList.remove('cd-top--is-visible')
+    }
+    function topFunction() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-
+    document.getElementById('back-to-top').addEventListener('click',function(){
+        topFunction();
+    })
 }
 
 
