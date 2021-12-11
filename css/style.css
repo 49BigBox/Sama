@@ -423,6 +423,10 @@ h2 {
     z-index:  1;
 }
 
+.service__icon a{
+    color: #F55F8D;
+}
+
 .service__item::after {
     position:         absolute;
     top:              0;
